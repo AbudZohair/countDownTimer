@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="app.js" type="module" defer></script>
+		<title>CountDownTimer</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>CountDown Timer</h1>
+			<!-- user Entery Form -->
+			<form class="countdownTimer">
+				<input type="text" name="eventName" id="event-name" placeholder="Enter Event Name" autocomplete="false" />
+				<input type="datetime-local" name="eventTime" id="event-time" value="2020-04-05T01:01" />
+				<input type="submit" value="Create" class="start btn" />
+			</form>
+			
+			<div class="tabs">
+				<div role="tablist">
+					<button role="tab" aria-selected="true" id="timer">
+						Timer
+					</button>
+					<button role="tab" aria-selected="false" id="upcoming">Upcoming Events</button>
+					<button role="tab" aria-selected="false" id="expired">Expired Events</button>
+				</div>
+				<div role="tabpanel" aria-labelledby="timer">
+					<div class="displaysection"></div>
+				</div>
+				<div role="tabpanel" aria-labelledby="upcoming" hidden>
+					<div class="upcoming"></div>
+				</div>
+				<div role="tabpanel" aria-labelledby="expired" hidden>
+					<div class="expired"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
